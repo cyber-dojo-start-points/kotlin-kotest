@@ -40,10 +40,18 @@ TEST_OPTS+=(-XX:TieredStopAtLevel=1)
 TEST_OPTS+=(-XX:AOTCache=/kotlin/junit.aot)
 TEST_OPTS+=(-Xlog:aot*=off)
 
+# The compiler targets 1.8 unless told otherwise, and mockk's every, verify
+# and the rest are inline functions built for 11, which it then refuses to
+# inline. 17 is named rather than the JDK's own version because the image
+# takes the newest JDK, and a target the compiler does not yet know is an
+# error; bytecode for 17 runs on anything newer.
+readonly JVM_TARGET=17
+
 # Every .kt file is compiled, including ones in sub-directories and ones
 # nothing else refers to yet, so a file you are midway through writing shows
 # its errors instead of being silently skipped.
 java "${COMPILER_OPTS[@]}" -cp "${COMPILER_JAR}" "${COMPILER_MAIN}" \
+  -jvm-target ${JVM_TARGET} \
   `find . -name '*.kt'` -cp $CLASSES -d .
 compiled=$?
 if [ $compiled -ne 0 ]; then
