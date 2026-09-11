@@ -58,9 +58,9 @@ if [ $compiled -ne 0 ]; then
   exit $compiled
 fi
 
-# By default you get a _large_ stack-trace when tests fail. Only the frames
-# naming the dojo package are kept, so the failing line in your own file
-# survives and the test engine's frames do not.
+# By default you get a _large_ stack-trace when tests fail. The frames naming
+# the test engine and the coroutines it runs tests on are dropped, so the
+# failing line in your own file survives whatever package you put it in.
 java "${TEST_OPTS[@]}" \
   -jar $LAUNCHER \
   execute \
@@ -68,8 +68,8 @@ java "${TEST_OPTS[@]}" \
   --scan-classpath . \
   --details=summary \
   --disable-ansi-colors \
-  2>&1 | awk '/^[ \t]+[A-Za-z_][A-Za-z0-9_.$]*\(/ { if ($0 ~ /^[ \t]+dojo\./) print; next } { print }'
+  2>&1 | grep -Ev '^[[:space:]]*(io\.kotest|kotlinx?\.coroutines)\.'
 
-# awk exits zero even when the run it filters failed, so the status of the
-# tests themselves has to come from PIPESTATUS.
+# grep reports whether it matched, not whether the run it filters failed, so
+# the status of the tests themselves has to come from PIPESTATUS.
 exit ${PIPESTATUS[0]}
