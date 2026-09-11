@@ -1,13 +1,13 @@
 {
-  "image_name": "ghcr.io/cyber-dojo-languages/kotlin_kotest:5e0c1e5",
-  "display_name": "Kotlin 2.4.10, Kotest 6.2.4",
+  "image_name": "ghcr.io/cyber-dojo-languages/kotlin_kotest:008cb12",
+  "display_name": "Kotlin 2.4, Kotest 6.2",
   "language": [
     "Kotlin",
-    "2.4.10"
+    "2.4"
   ],
   "test_framework": [
     "Kotest",
-    "6.2.4"
+    "6.2"
   ],
   "visible_filenames": [
     "HikerTest.kt",

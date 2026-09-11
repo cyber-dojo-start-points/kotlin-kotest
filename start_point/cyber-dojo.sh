@@ -31,12 +31,14 @@ COMPILER_OPTS+=(-Xlog:aot*=off)                            # as above, for the a
 COMPILER_OPTS+=(--enable-native-access=ALL-UNNAMED)        # the kotlinc script passes this on jdk 24+
 COMPILER_OPTS+=(--sun-misc-unsafe-memory-access=allow)     # as above
 
-# The test JVM keeps its class-data archive. An AOT cache was measured here too
-# and came out level with it, so there is nothing to gain by changing it.
+# The test JVM replays an AOT cache, as the compiler does. The two mechanisms
+# measured level here, and a class-data archive is written with
+# -XX:ArchiveClassesAtExit, which refuses to run unless the JDK has a base
+# archive loaded, and this one has none.
 TEST_OPTS=()
 TEST_OPTS+=(-XX:TieredStopAtLevel=1)
-TEST_OPTS+=(-XX:SharedArchiveFile=/kotlin/junit.jsa)
-TEST_OPTS+=(-Xlog:cds*=off)
+TEST_OPTS+=(-XX:AOTCache=/kotlin/junit.aot)
+TEST_OPTS+=(-Xlog:aot*=off)
 
 # Every .kt file is compiled, including ones in sub-directories and ones
 # nothing else refers to yet, so a file you are midway through writing shows
