@@ -1,0 +1,8 @@
+{
+  "max_output_lines": 15,
+  "matches": [ "^Hiker\\.kt:[0-9]+:[0-9]+: error: unresolved reference 'sixTimesSevn'\\.$" ],
+  "match_counts": {
+    "^[A-Za-z]+\\.kt:[0-9]+:[0-9]+: error: ": 1,
+    "^Test run finished after ": 0
+  }
+}

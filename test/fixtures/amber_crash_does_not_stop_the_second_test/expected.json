@@ -1,0 +1,12 @@
+{
+  "match_counts": {
+    "^Failures \\(1\\):$": 1,
+    "^ +Kotest:HikerTest:life the universe and everything$": 1,
+    "^ +=> java\\.lang\\.ArithmeticException: / by zero$": 1,
+    "^\\[ +2 tests found +\\]$": 1,
+    "^\\[ +2 tests started +\\]$": 1,
+    "^\\[ +1 tests successful +\\]$": 1,
+    "^\\[ +1 tests failed +\\]$": 1
+  },
+  "truncated": false
+}

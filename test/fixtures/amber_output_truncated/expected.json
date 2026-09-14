@@ -1,0 +1,10 @@
+{
+  "matches": [ "^debug: i is 0$" ],
+  "match_counts": {
+    "^Test run finished after ": 0,
+    "^\\[ +[0-9]+ tests found +\\]$": 0,
+    "^\\[ +[0-9]+ tests successful +\\]$": 0,
+    "^\\[ +[0-9]+ tests failed +\\]$": 0
+  },
+  "truncated": true
+}

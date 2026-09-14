@@ -1,0 +1,12 @@
+{
+  "match_counts": {
+    "^Failures \\(1\\):$": 1,
+    "^ +Kotest:AnswerSizeTest:the answer is three digits long$": 1,
+    "^ +=> org\\.opentest4j\\.AssertionFailedError: expected:<3> but was:<2>$": 1,
+    "^\\[ +2 tests found +\\]$": 1,
+    "^\\[ +2 tests started +\\]$": 1,
+    "^\\[ +1 tests successful +\\]$": 1,
+    "^\\[ +1 tests failed +\\]$": 1
+  },
+  "truncated": false
+}

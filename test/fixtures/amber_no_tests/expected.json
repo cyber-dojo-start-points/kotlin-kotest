@@ -1,0 +1,12 @@
+{
+  "max_output_lines": 30,
+  "match_counts": {
+    "^\\[ +0 tests found +\\]$": 1,
+    "^\\[ +0 tests started +\\]$": 1,
+    "^\\[ +0 tests successful +\\]$": 1,
+    "^\\[ +0 tests failed +\\]$": 1,
+    "^\\[ +0 containers failed +\\]$": 1,
+    "^Failures \\(": 0
+  },
+  "truncated": false
+}

@@ -1,0 +1,12 @@
+{
+  "match_counts": {
+    "^Failures \\(2\\):$": 1,
+    "^ +=> java\\.lang\\.ArithmeticException: / by zero$": 1,
+    "^ +=> org\\.opentest4j\\.AssertionFailedError: expected:<3> but was:<2>$": 1,
+    "^\\[ +2 tests found +\\]$": 1,
+    "^\\[ +2 tests started +\\]$": 1,
+    "^\\[ +0 tests successful +\\]$": 1,
+    "^\\[ +2 tests failed +\\]$": 1
+  },
+  "truncated": false
+}
