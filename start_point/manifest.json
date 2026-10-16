@@ -1,5 +1,5 @@
 {
-  "image_name": "ghcr.io/cyber-dojo-languages/kotlin_kotest:b1860eb@sha256:d215dd60f7d7eb0b49e535e442a71365189f4d190f9f5909366fc1d986ecbf1f",
+  "image_name": "ghcr.io/cyber-dojo-languages/kotlin_kotest:6f0b72e@sha256:088467273ab2d01d7fc1fecf6037e2a3e3737f623638bdbeea5a17718e34a351",
   "display_name": "Kotlin 2.4.21, Kotest 6.2.6",
   "language": [
     "Kotlin",
